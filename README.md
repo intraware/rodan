@@ -19,7 +19,7 @@
 Rodan is a highly performant CTF platform, mainly written in Go.
 
 ## **Key Features**
-- **Easy Setuo** 
+- **Easy Setup** 
 - **Asynchronous**  
 - **Heavily Tested**
 - **Modular**
@@ -37,7 +37,7 @@ Documentations can be found at [pkg.go.dev](https://pkg.go.dev).
 
 ## **Index**
 - [Rodan-Core](https://github.com/intraware/rodan-core)
-- [Rodan-Verify](https://github.com/intraware/rodan-verify)
+- [Rodan-Authify](https://github.com/intraware/rodan-authify)
 - [Rodan-SSE](https://github.com/intraware/rodan-sse)
 - [Rodan-FileServer](https://github.com/intraware/rodan-fileserver)
 
