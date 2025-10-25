@@ -1,4 +1,4 @@
-![rodan](./rodan_textual.png)
+![rodan](.github/assets/rodan_textual.png)
 <p align="center">
     <br>
     <b>A high performance CTF platform.</b>
@@ -40,6 +40,7 @@ Documentations can be found at [pkg.go.dev](https://pkg.go.dev).
 - [Rodan-Authify](https://github.com/intraware/rodan-authify)
 - [Rodan-SSE](https://github.com/intraware/rodan-sse)
 - [Rodan-FileServer](https://github.com/intraware/rodan-fileserver)
+- [Rodan-Admin](https://github.com/intraware/rodan-admin)
 
 ## **Contributing**
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -1,0 +1,77 @@
+[server]
+host = "127.0.0.1"
+port = 8000
+production = true
+cors-url = ["*"]
+
+[server.security]
+jwt-secret = "testing1234555"
+flag-secret = "super-secret-flag-key"
+admin-jwt-secret = "aadmin000testing"
+
+[docker]
+socket-url = "unix:///var/run/docker.sock" 
+port-range = { start = 40000, end = 45000 }
+container-timeout = "0s"
+pool-size = 3
+clean-orphaned = true
+binding-host = "0.0.0.0"
+port-retry-times = 3
+
+[database]
+host = "localhost"
+port = 5432
+username = "your_db_user"
+password = "your_db_password"
+database-name = "your_database"
+ssl-mode = "disable" 
+max-tries = 5
+
+[app]
+token-expiry = "15m"
+flag-format = "rodan"
+frontend-cache-duration = "60s"
+
+[app.leaderboard]
+user = true
+team = true
+debounce-timer = "30s"
+full-points-threshold = 3 # this much ppl will get full points
+decay-sharpness = 2.25
+user-blacklist = [0,1]
+team-blacklist = [0,1]
+
+[app.ban]
+enable-user-ban = true
+enable-team-ban = false
+initial-ban-duration = "30m" 
+ban-growth-factor = 2.5
+max-ban-duration = "24h" 
+
+[app.cache]
+in-app = false
+service-url = "redis://cache:6379"
+service-type = "redis"
+internal-cache-size = 1000 # (skip mentioning this if you are using in-app cache)
+internal-cache-duration = "1m" # (skip mentioning this if you are using in-app cache)
+skip-internal-cache = true
+
+[app.notifications]
+enabled = true
+delivery-method = "http"
+default-retry = 3
+retry-delay = "5s"
+timeout = "10s"
+
+[app.notifications.http]
+url = "http://notification:8000"
+endpoint = "/api/events/ingest"
+api-key = "super-secret-notification-key"
+
+[app.auth-service]
+url = "http://server-auth:8000"
+endpoint = "/api/admin"
+api-key = "somethingfortesting123"
+retry-times = 3
+timeout = "10s"
+retry-delay = "5s"
